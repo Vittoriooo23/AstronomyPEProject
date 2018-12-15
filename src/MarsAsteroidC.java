@@ -34,10 +34,10 @@ public class MarsAsteroidC extends Main{
     @FXML
     void ConvertUnit(ActionEvent event) {
         if(distanceChB.getValue()=="miles"){
-            outputDistance.setText(Double.toString(Double.parseDouble(convDistanceTF.getText())*1.60934) + "km");
+            outputDistance.setText(df.format(Double.parseDouble(convDistanceTF.getText())*1.60934) + "km");
         }
         else if(distanceChB.getValue()=="meters"){
-            outputDistance.setText(Double.toString(Double.parseDouble(convDistanceTF.getText())*.001) + "km");
+            outputDistance.setText(df.format(Double.parseDouble(convDistanceTF.getText())*.001) + "km");
         }
     }
 

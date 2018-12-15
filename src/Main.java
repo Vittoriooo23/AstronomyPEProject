@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.text.DecimalFormat;
+
 import static javafx.application.Application.launch;
 
 public class Main extends Application {
@@ -42,6 +44,7 @@ public class Main extends Application {
     public double ISSMass = 417289;
     public double MoonMassx22 = 7.34767309;
     public double aBombPowerx9 = 4.184;
+    DecimalFormat df = new DecimalFormat("#.###");
 
     public double G = .0000000000667;
 
