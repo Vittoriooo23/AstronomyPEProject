@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EarthISSC">
+    <children>
+        <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/SpaceBackground.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="600.0" fitWidth="657.0" layoutX="49.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/Earth.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="236.0" fitWidth="572.0" layoutX="920.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/ISS.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="289.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Earth:">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="168.0" layoutY="788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mass: 5.972 x 10^24kg">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Line endX="100.0" layoutX="832.0" layoutY="311.0" rotate="-11.0" scaleX="3.5" scaleY="2.0" startX="-100.0" stroke="WHITE" />
+        <Text fill="WHITE" layoutX="1140.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISS:">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="1065.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mass:">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="1272.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Converter">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="1158.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="417,289kg">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="730.0" layoutY="294.0" rotate="-11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <TextField fx:id="distanceTF" layoutX="737.0" layoutY="327.0" prefHeight="39.0" prefWidth="162.0" promptText="ex. 500" rotate="-11.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="898.0" layoutY="340.0" rotate="-11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="km">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="775.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-GMm">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="809.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formula:">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Line endX="100.0" layoutX="826.0" layoutY="681.0" scaleX="0.75" startX="-100.0" stroke="WHITE" />
+        <Text fill="WHITE" layoutX="819.0" layoutY="726.0" strokeType="OUTSIDE" strokeWidth="0.0" text="r">
+            <font>
+                <Font size="42.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="912.0" layoutY="701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="962.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <ChoiceBox fx:id="distanceChB" layoutX="1325.0" layoutY="749.0" prefHeight="30.0" prefWidth="89.0" />
+        <TextField fx:id="convDistanceTF" layoutX="1206.0" layoutY="749.0" prefHeight="25.0" prefWidth="119.0" promptText="distance">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="1414.0" layoutY="783.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" wrappingWidth="32.8359375">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Label fx:id="outputDistance" layoutX="1447.0" layoutY="744.0" textFill="WHITE">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="ConvertButton" layoutX="1351.0" layoutY="790.0" mnemonicParsing="false" onAction="#ConvertUnit" text="Convert!">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+        <Label fx:id="Calculate" layoutX="600.0" layoutY="36.0" onMouseClicked="#runCalculations" text="Calculate Potential Energy!" textFill="WHITE" underline="true">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Text fill="WHITE" layoutX="722.0" layoutY="756.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G = Gravitational Constant = 6.67 x 10^-11">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="801.0" layoutY="786.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M = Mass of the Planet">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="800.0" layoutY="816.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m = Mass of the Object">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="737.0" layoutY="847.0" strokeType="OUTSIDE" strokeWidth="0.0" text="r = distance between Planet and Object">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="815.0" layoutY="873.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PE = Potential Energy">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button layoutX="1525.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToChoicePane" text="Back">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Text fill="WHITE" layoutX="811.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click ^^^ to Calculate!">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

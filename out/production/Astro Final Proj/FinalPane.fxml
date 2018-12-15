@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinalPaneC">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/AtomicBombExplosion.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="36.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="That Just Generated :">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Label fx:id="totalOutput" layoutX="183.0" layoutY="404.0" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="1097.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equivalent to:">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Label fx:id="aBombEquivalent" layoutX="1139.0" layoutY="411.0" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="1073.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atomic Bombs!">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <Button layoutX="725.0" layoutY="750.0" mnemonicParsing="false" onAction="#backToChoicePane" text="Again!">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
