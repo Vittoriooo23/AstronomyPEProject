@@ -153,7 +153,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="1525.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToChoicePane" text="Back">
+      <Button layoutX="1525.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToChoicePane" text="Back" AnchorPane.leftAnchor="25.0">
          <font>
             <Font size="18.0" />
          </font>
