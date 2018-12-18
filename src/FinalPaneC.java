@@ -14,7 +14,7 @@ public class FinalPaneC extends Main{
     @FXML
     private void initialize() {
         totalOutput.setText(String.format("%6.3e",totalPE));
-        double temp = -1*totalPE / aBombPowerx9;
+        double temp = (SPE - totalPE) / aBombPowerx9;
         for(int i = 0; i < 9; i++)
             temp = temp/10;
         aBombEquivalent.setText(String.format("%6.3e",temp));

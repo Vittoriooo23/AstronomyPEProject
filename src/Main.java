@@ -37,6 +37,7 @@ public class Main extends Application {
     }
 
     public static double totalPE;
+    public static double SPE;
 
     public double EarthMassx24 = 5.972;
     public double MarsMassx23 = 6.39;

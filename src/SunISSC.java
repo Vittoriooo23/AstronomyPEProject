@@ -41,7 +41,8 @@ public class SunISSC extends Main{
     @FXML
     void runCalculations(MouseEvent event) {
         if(Double.parseDouble(distanceTF.getText()) > 0) {
-            totalPE = -1 * G * SunMassx30 * ISSMass / Double.parseDouble(distanceTF.getText());
+            totalPE = -1 * G * SunMassx30 * ISSMass / (Double.parseDouble(distanceTF.getText())+ 6371);
+            SPE = -1 * G * SunMassx30 * ISSMass / 6371;
             for(int i = 0; i < 30; i++)
                 totalPE = totalPE * 10;
         }

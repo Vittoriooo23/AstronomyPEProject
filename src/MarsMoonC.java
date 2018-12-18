@@ -41,7 +41,8 @@ public class MarsMoonC extends Main{
     @FXML
     void runCalculations(MouseEvent event) {
         if(Double.parseDouble(distanceTF.getText()) > 0) {
-            totalPE = -1 * G * MarsMassx23 * MoonMassx22 / Double.parseDouble(distanceTF.getText());
+            totalPE = -1 * G * MarsMassx23 * MoonMassx22 / (Double.parseDouble(distanceTF.getText())+ 6371);
+            SPE = -1 * G * MarsMassx23 * MoonMassx22 / 6371;
             for(int i = 0; i < 45; i++)
                 totalPE = totalPE * 10;
         }
